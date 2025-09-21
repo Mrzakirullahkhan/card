@@ -299,11 +299,11 @@ function Home() {
     ];
 
     return (
-<div className="min-h-screen pt-20 px-6 overflow-x-hidden">
+<div className=" pt-20 px-6  overflow-x-hidden">
   {Array.from({ length: Math.ceil(cardsData.length / 4) }).map((_, rowIndex) => (
     <div
       key={rowIndex}
-      className="flex gap-10 mb-10" // one row of cards
+      className="flex gap-2 mb-10 " 
       style={{ justifyContent: 'flex-start' }} // keeps them left-aligned
     >
       {cardsData
@@ -311,7 +311,7 @@ function Home() {
         .map((card, index) => (
           <div
             key={index}
-            className="bg-white overflow-hidden cursor-pointer w-[350px] flex-shrink-0"
+            className="bg-white overflow-hidden cursor-pointer w-[330px] flex-shrink-0"
             onClick={() => navigate(`/detail/${rowIndex * 4 + index}`, { state: { card } })}
           >
             <div className="h-80 w-[350px] overflow-hidden">
@@ -345,15 +345,6 @@ function Home() {
     </div>
   ))}
 </div>
-
-
-
-
-
-
-
-
-
 
 
     );
